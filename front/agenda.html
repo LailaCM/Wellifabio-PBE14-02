@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Agenda</title>
+</head>
+
+<body>
+    <header>
+        <h1>Agendamento de consultas</h1>
+        <nav>
+            <a href="medicos.html" class="btn">Médicos</a>
+            <a href="pacientes.html" class="btn">Pacientes</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Consulta</h2>
+            <form id="cadastro">
+                <label for="data_hora">Data e hora</label>
+                <input type="datetime-local" id="data_hora" name="data_hora" placeholder="Digite a data da consulta" required>
+                <label for="id_medico">Médico</label>
+                <input type="number" id="id_medico" name="id_medico" placeholder="Digite o id do Médico" required>
+                <label for="id_paciente">Paciente</label>
+                <input type="number" id="id_paciente" name="id_paciente" placeholder="Digite seu id" required>
+                <label for="motivo">Motivo</label>
+                <input type="text" id="motivo" name="motivo" placeholder="Digite o motivo da consulta" >
+                <button type="submit">Cadastrar</button>
+                <button type="button" id="cancelarEdicao" style="display: none;">Cancelar</button>
+            </form>
+
+        </section>
+
+        <section>
+            <h2>Consultas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Data e hora</th>
+                        <th>Médico</th>
+                        <th>Paciente</th>
+                        <th>Motivo</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="consultas"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <h2 id="msg">Irei notificar suas ações!</h2>
+        <br>
+        <div id="container">
+            <h2>Produzido por Laila Casadei</h2>
+        </div>
+    </footer>
+
+    <script src="script3.js"></script>
+</body>
+
+</html>
